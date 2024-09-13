@@ -11,7 +11,13 @@ const songs = [
     { title: "Come and Get Your Love", artist: "Redbone", genre: "Rock" },
     { title: "I'm Not in Love", artist: "10cc", genre: "Pop" },
     { title: "Fooled Around and Fell in Love", artist: "Elvin Bishop", genre: "Rock" },
-    // Feel free to add even more songs
+    {title: "God is Good", artist: "Jonathan McReynolds", genre: "Gospel" }, // added more songs
+    {title: "Ingelosi", artist: "Brandon Dhludhlu", genre: "Amapiano" },
+    {title: "Umthandazo", artist: "Lwah Ndlunkulu", genre: "Afro-pop" },
+    {title: "The Only Reason", artist: "Jp Cooper", genre: "Pop" },
+    {title: "The Point of it All", artist: "Anthony Hamilton", genre: "Contemporary Soul" },
+    {title: "Goodness of God", artist: "Cece Winans", genre: "Gospel" },
+    
 ];
 
 
@@ -19,7 +25,8 @@ const songs = [
 const guardians = {
     "Star-Lord": "Rock",
     "Gamora": "Pop",
-    // Add preferences for Drax, Rocket, and Groot
+    
+    // Add preferences for' Drax', Rocket, and Groot
 };
 
 // Function to generate playlist based on preferred genre
