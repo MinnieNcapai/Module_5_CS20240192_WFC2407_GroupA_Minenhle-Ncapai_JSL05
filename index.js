@@ -17,7 +17,10 @@ const songs = [
     {title: "The Only Reason", artist: "Jp Cooper", genre: "Pop" },
     {title: "The Point of it All", artist: "Anthony Hamilton", genre: "Contemporary Soul" },
     {title: "Goodness of God", artist: "Cece Winans", genre: "Gospel" },
+    {title: "Almost Is Never Enough", artist: "Adele", genre: "Pop" },
+    {title: "Best Part ", artist: "Daniel Caeser", genre: "R&B" },
     
+
 ];
 
 
@@ -32,19 +35,20 @@ const guardians = {
 };
 
 // Function to generate playlist based on preferred genre
-function generatePlaylist(guardians, songs) {
-    // Use the map() function to create playlists for each Guardian
-    // Your code here
+ // Use the map() function to create playlists for each Guardian
 
+function generatePlaylist(guardians, songs) {
+     // Use Object.keys() to get an array of Guardian names,then map over this array to create a playlist for each Guardian
         const playlists = Object.keys(guardians).map(guardian => {
-            const favGenre = songs.filter(song => song.genre === guardians[guardian]);
-                return { guardian, favGenre: favGenre.map(song => song.title) };
+            // Filter songs for each Guardian's preferred genre
+            const playlist = songs.filter(song => song.genre === guardians[guardian]);
+            // Return an object with the Guardian's name and their playlist 
+                return { guardian, playlist};
             });
+            return playlists;
             
         }
-
-
 // Call generatePlaylist and display the playlists for each Guardian
-generatePlaylist(guardians, songs);
+const playlists = generatePlaylist(guardians, songs);
 
 
